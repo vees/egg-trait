@@ -1,22 +1,20 @@
+import countapi from 'countapi-js';
+
 import logo from './logo.svg';
 import './App.css';
+
+function updateAndReport()
+{
+  countapi.visits('1ccb732e-b55a-4404-ad3f-0f99c02fe44e').then((result) => {
+    console.log(result.value);
+  });
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={updateAndReport}>Click me</button>
       </header>
     </div>
   );
