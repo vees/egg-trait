@@ -20,7 +20,7 @@ class PurpleCowButton extends React.Component {
 	}
 
 	render() {
-		return <button onClick={this.updateClickCount}>{this.state.clickCount}</button>;
+		return <div><a className="btn btn-action btn-block" onClick={this.updateClickCount}>{this.state.clickCount}</a></div>;
 	}
 }
 
